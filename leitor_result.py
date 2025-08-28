@@ -4,13 +4,6 @@ import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 import numpy as np
 import io
-import locale
-
-# Configura separador decimal para vírgula
-try:
-    locale.setlocale(locale.LC_ALL, "pt_BR.UTF-8")
-except:
-    locale.setlocale(locale.LC_ALL, "Portuguese_Brazil.1252")
 
 st.title("Visualizador de Arquivos .Result")
 
