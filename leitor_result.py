@@ -84,7 +84,7 @@ if uploaded_files:
             with col4:
                 x_log = st.checkbox("Eixo X logarítmico", value=False, key=f"xlog_{idx}")
             with col5:
-                show_subfaixas = st.checkbox("Exibir limites de subfaixas de radiofrequências", value=False, key=f"subfaixas_{idx}")
+                show_subfaixas = st.checkbox("Exibir subfaixas autorizadas", value=False, key=f"subfaixas_{idx}")
 
             # Marcadores definidos pelo usuário (campo + cor na mesma linha)
             st.markdown("### Marcadores de frequência")
