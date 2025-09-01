@@ -60,7 +60,7 @@ if uploaded_files:
             if y_units.lower() == "dbm":
                 default_ylabel = "Potência (dBm)"
             elif y_units.lower() in ["dbuv/m", "dbµv/m", "dbμv/m"]:
-                default_ylabel = "Intensidade de campo a 3 m (dBµV/m)"
+                default_ylabel = "Campo a 3 m (dBµV/m)"
 
             # Opção de título do gráfico
             title = st.text_input(f"Título para o gráfico de {uploaded_file.name}", value=f"Gráfico - {uploaded_file.name}", key=f"title_{idx}")
@@ -76,13 +76,13 @@ if uploaded_files:
             # Limites do eixo X + Atenuador + opções adicionais
             col1, col2, col3, col4, col5 = st.columns(5)
             with col1:
-                x_min = st.number_input("Frequência mínima (MHz)", value=float(df["Frequency_MHz"].min()), key=f"xmin_{idx}")
+                x_min = st.number_input("Freq. STOP (MHz)", value=float(df["Frequency_MHz"].min()), key=f"xmin_{idx}")
             with col2:
-                x_max = st.number_input("Frequência máxima (MHz)", value=float(df["Frequency_MHz"].max()), key=f"xmax_{idx}")
+                x_max = st.number_input("Freq. START (MHz)", value=float(df["Frequency_MHz"].max()), key=f"xmax_{idx}")
             with col3:
-                attenuator_db = st.number_input("Atenuador (dB)", value=0.0, step=0.1, key=f"att_{idx}")
+                attenuator_db = st.number_input("Att/add (dB)", value=0.0, step=0.1, key=f"att_{idx}")
             with col4:
-                x_log = st.checkbox("Eixo X logarítmico", value=False, key=f"xlog_{idx}")
+                x_log = st.checkbox("Eixo X log", value=False, key=f"xlog_{idx}")
             with col5:
                 show_subfaixas = st.checkbox("Exibir subfaixas autorizadas", value=False, key=f"subfaixas_{idx}")
 
