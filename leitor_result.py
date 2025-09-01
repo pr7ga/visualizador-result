@@ -220,7 +220,7 @@ if uploaded_files:
             st.download_button(
                 label="📥 Baixar gráfico PNG",
                 data=buf.getvalue(),
-                file_name=f"{uploaded_file.name}_plot.png",
+                file_name=f"{title}.png",
                 mime="image/png",
                 key=f"download_{idx}"
             )
