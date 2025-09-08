@@ -80,7 +80,7 @@ if uploaded_files:
             with col2:
                 x_max = st.number_input("Freq. START (MHz)", value=float(df["Frequency_MHz"].max()), key=f"xmax_{idx}")
             with col3:
-                attenuator_db = st.number_input("Att/add (dB)", value=0.0, step=0.1, key=f"att_{idx}")
+                attenuator_db = st.number_input("Att/add (dB)", value=-26.0, step=0.1, key=f"att_{idx}")
             with col4:
                 x_log = st.checkbox("Eixo X log", value=False, key=f"xlog_{idx}")
             with col5:
