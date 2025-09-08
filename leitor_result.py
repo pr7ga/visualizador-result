@@ -63,7 +63,7 @@ if uploaded_files:
                 default_ylabel = "Campo a 3 m (dBµV/m)"
 
             # Opção de título do gráfico
-            title = st.text_input(f"Título para o gráfico de {uploaded_file.name}", value=f"Gráfico - {uploaded_file.name}", key=f"title_{idx}")
+            title = st.text_input(f"Título para o gráfico de {uploaded_file.name}", value=f"Porta {uploaded_file.name} - Conduzida", key=f"title_{idx}")
 
             # Seleção de curvas múltiplas (agora ambas são padrão)
             options = st.multiselect(
